@@ -1,0 +1,113 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+body{
+    background:#111;
+    color:white;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.container{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:flex-start;
+}
+.calculator{
+    width:360px;
+    background:#1e1e1e;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+.calculator h1{
+    text-align:center;
+    margin-bottom:20px;
+    color:#ddd;
+    font-size:22px;
+}
+#display{
+    width:100%;
+    height:70px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    background:#2c2c2c;
+    color:white;
+    font-size:28px;
+    text-align:right;
+    padding:15px;
+    margin-bottom:20px;
+}
+.buttons{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:10px;
+}
+button{
+    height:60px;
+    border:none;
+    border-radius:12px;
+    background:#333;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.2s;
+}
+button:hover{
+    background:#555;
+    transform:scale(1.05);
+}
+.operator{
+    background:#555;
+}
+.equal{
+    grid-column:span 5;
+    background:#999;
+    color:black;
+    font-weight:bold;
+}
+.history-box{
+    width:250px;
+    background:#1e1e1e;
+    padding:20px;
+    border-radius:20px;
+    max-height:500px;
+    overflow-y:auto;
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+.history-box h2{
+    margin-bottom:15px;
+    color:#ddd;
+}
+.history-item{
+    background:#2c2c2c;
+    padding:10px;
+    border-radius:10px;
+    margin-bottom:10px;
+    word-wrap:break-word;
+    cursor:pointer;
+}
+.clear-history{
+    width:100%;
+    margin-top:10px;
+    background:#777;
+    color:black;
+    font-weight:bold;
+}
+@media(max-width:700px){
+    body{
+        height:auto;
+        padding:20px;
+    }
+    .container{
+        flex-direction:column;
+        align-items:center;
+    }
+}
